@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE students [
+<!ENTITY course "MCA">
+<!ENTITY cours "Mtech">
+<!ENTITY courses "Btech">
+]>
+
+<students>
+<student>
+<name>anupam</name>
+<id>079</id>
+<course> &course; </course>
+</student>
+
+<student>
+<name>anup</name>
+<id>081</id>
+<course> &cours; </course>
+</student>
+
+<student>
+<name>akash</name>
+<id>082</id>
+<course> &courses; </course>
+</student>
+
+<student>
+<name>aman</name>
+<id>083</id>
+<course> &course; </course>
+</student>
+
+</students>

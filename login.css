@@ -1,0 +1,33 @@
+body{
+background-color:grey;
+}
+.form{
+position:relative;
+width:250px;
+height:300px;
+text-align:center;
+padding:50px 50px;
+margin:100px 500px;
+color:black;
+border-radius:100px;
+box-shadow:50px 50px 20px;
+background:orange;
+}
+label{
+display:block;
+margin:20px;
+}
+input{
+padding:5px 20px;
+margin 10px;
+border-radius:10px;
+}
+button{
+padding:5px 20px;
+margin:20px 10px;
+display:inline-block;
+background-color:blue;
+border-radius:10px;
+color:pink;
+}
+

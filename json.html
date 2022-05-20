@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div>
+<h1>Student Data</h1>
+</div>
+<script>
+function getStudentData(){
+var students=[{"student_id":"MCA01",
+               "student_name":"Suraj",
+               "department":"MCA",
+               "year":"2022"
+               },
+               {"student_id":"MCA02",
+               "student_name":"Roshan",
+               "department":"MCA",
+               "year":"2022"
+               },
+               {"student_id":"MCA03",
+               "student_name":"Manju",
+               "department":"MCA",
+               "year":"2022"
+               },
+               {"student_id":"MCA04",
+               "student_name":"Sumanth",
+               "department":"MCA",
+               "year":"2022"
+               },
+                {"student_id":"MCA05",
+               "student_name":"Vaishak",
+               "department":"MCA",
+               "year":"2022"
+               },
+               {"student_id":"MCA06",
+               "student_name":"Ashwith",
+               "department":"MCA",
+               "year":"2022"
+               },
+               {"student_id":"MCA07",
+               "student_name":"Kartik",
+               "department":"MCA",
+               "year":"2022"
+               },
+               {"student_id":"MCA01",
+               "student_name":"Raju",
+               "department":"MCA",
+               "year":"2022"
+               },
+               {"student_id":"MCA09",
+               "student_name":"Jagadish",
+               "department":"MCA",
+               "year":"2022"
+               },
+
+               {"student_id":"MCA10",
+               "student_name":"Aryan",
+               "department":"MCA",
+               "year":"2022"
+               }]
+var tabledata ='<table><tr><th>STUDENT ID</th><th>STUDENT NAME</th><th>DEPARTMENT</th><th>YEAR</th></tr>'
+students.forEach(function(d){
+    tabledata +='<tr><td>'+d.student_id+'</td><td>'+d.student_name+'</td><td>'+d.department+'</td><td>'+d.year+'</td></tr>';
+            });
+ tabledata +='<table>';
+var divcontainer=document.getElementById("pid");
+divcontainer.innerHTML=tabledata;
+}
+</script>
+<style>
+table,th,td{
+    text-align:center;
+    border: solid black 1px;
+    background-color:wheat;
+    margin-left:auto;margin-right:auto;
+}
+div{
+    text-align:center;
+    background-color:cornflowerblue;
+    padding-to
+   }
+th{ color:Blue;background-color:white;}
+</style>
+</head>
+<body>
+<button type="button" onclick="getStudentData()">Student data</button>
+<p id="pid"></p>
+</body>
+</html>
+
+
+
+
+
+
+
+

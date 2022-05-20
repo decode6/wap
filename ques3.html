@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>XML</title>
+
+<style>
+table,th,td {
+align:center;
+border:1px black;
+width:70%;
+}
+
+th
+{
+background-color:grey;
+color:white;
+}
+
+</style>
+<script>
+
+
+function fun()
+{
+var a = new XMLHttpRequest();
+a.onreadystatechange=function()
+{
+if(this.readyState == 4 && this.status == 200)
+{
+	fin(this)
+}
+};
+a.open("GET","ques3.xml",true);
+a.send();
+}
+function fin(xml)
+{
+var i;
+var data = xml.responseXML;
+var table="<tr><th>NAME</th><th>ID</th><th>COURSE</th></tr>";
+var x=data.getElementsByTagName("student");
+for(i = 0; i < x.length ;i++)
+{
+table +=  "<tr><td>" +
+x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +"</td><td>" +
+x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue +"</td><td>" +
+x[i].getElementsByTagName("course")[0].childNodes[0].nodeValue +"</td></tr>";
+}
+document.getElementById("demo").innerHTML=table;
+}
+</script>
+</head>
+<body>
+<button onclick="fun()">Student-Information</button>
+<div style="align:center; margin-top:200px; margin-left:400px;">
+<table id="demo"> 
+</table>
+</div>
+</body>
+</html>

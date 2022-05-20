@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<style>
+body{   
+background-color:grey;
+}
+.form{  
+position:relative;
+width:250px;
+height:300px;
+text-align:center;
+padding:50px 50px;
+margin:100px 500px;
+color:black;
+border-radius:100px;
+box-shadow:50px 50px 20px;
+background:orange;
+}
+label{  
+display:block;
+margin:20px;
+}
+input{
+padding:5px 20px;
+margin 10px;
+border-radius:10px;
+}
+button{ 
+padding:5px 20px;
+margin:20px 10px;
+display:inline-block;
+background-color:blue;
+border-radius:10px;
+color:pink;
+}
+
+</style>
+<title>Login</title>
+</head>
+<body>
+<form class="form">
+<h2>Login Form</h2>
+<div>
+<label>USERNAME</label>
+<input type="text" placeholder="enter username" id="user" onclick="n()" />
+</div><div><label>PASSWORD</label>
+<input type="text" placeholder="enter password" id="pass" onclick="p()" />
+</div><div><button type="button" onclick="val()" >Submit</button>
+<button type="button" onclick="res()" >Reset</button>
+</div>
+</form>
+<script>
+function val() {
+var usr=/[0-9A-Z]{10}/;
+var password=/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z))(?=.*[@$%])(?=.*[0-9]){8,}/;
+var user=document.getElementById("user").value;
+var pass=document.getElementById("pass").value;
+if(!usr.test(user) || !password.test(pass)){
+alert("Login Failed");
+}else
+{
+alert("login Successfull");
+document.write("login date :",Date());
+document.body.bgColor=getcolor();
+localStorage.setItem("name",user);
+localStorage.setItem("password",pass);
+}
+function getcolor () {
+var letter="0123456789ABCDEF";
+var color="#";
+for(var i=0;i<6;i++){
+color+=letter[Math.floor(Math.random()*16)];
+}
+return color;
+}
+function res() {
+document.getElementById("user").value="";
+document.getElementById("pass").value="";
+}
+
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
